@@ -1,4 +1,8 @@
 import { encodeHTML, flexLayout } from "./utils.js";
+import Ball from "./backgrounds/Ball.js";
+import Character from "./backgrounds/Character.js";
+import Sword from "./backgrounds/Sword.js";
+import Ball2 from "./backgrounds/Ball2.js";
 
 class Card {
   /**
@@ -251,6 +255,22 @@ class Card {
               ? "url(#gradient)"
               : this.colors.bgColor
           }"
+          stroke-opacity="${this.hideBorder ? 0 : 1}"
+        />
+        
+        ${Character}
+        ${Ball}
+        ${Ball2}
+        ${Sword}
+        
+        <rect
+          data-testid="card-bg2"
+          x="0.5"
+          y="0.5"
+          rx="4.5"
+          height="99.5%"
+          stroke="#E4E2E2"
+          width="${this.width - 1}"
           stroke-opacity="${this.hideBorder ? 0 : 1}"
         />
 
